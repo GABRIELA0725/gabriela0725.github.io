@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Treinamento Gratuito: 3 Segredos Para Passar no GHC em 2024</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            background: #FCD34D;
+            color: #1E3A8A;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #FCD34D, #F59E0B);
+        }
+        
+        .headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subheadline {
+            font-size: 1.3rem;
+            color: #6B7280;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .benefits {
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #F8FAFC;
+            border-radius: 10px;
+            border-left: 4px solid #FCD34D;
+        }
+        
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: #1E3A8A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .benefit-text {
+            flex: 1;
+        }
+        
+        .benefit-title {
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 5px;
+        }
+        
+        .benefit-description {
+            color: #6B7280;
+            font-size: 14px;
+        }
+        
+        .cta-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #FCD34D, #F59E0B);
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .cta-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            margin-bottom: 20px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-btn::before {
+            content: '📱';
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .urgency {
+            background: #FEE2E2;
+            border: 2px solid #F87171;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .urgency-text {
+            color: #DC2626;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .social-proof {
+            margin: 40px 0;
+            padding: 30px;
+            background: #F8FAFC;
+            border-radius: 15px;
+        }
+        
+        .testimonial {
+            font-style: italic;
+            color: #4B5563;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #1E3A8A;
+            text-align: right;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #6B7280;
+            font-size: 14px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #FCD34D;
+            text-decoration: none;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-card {
+                padding: 25px;
+            }
+            
+            .headline {
+                font-size: 2rem;
+            }
+            
+            .subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .whatsapp-btn {
+                padding: 18px 30px;
+                font-size: 1.1rem;
+            }
+            
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat {
+                margin: 15px 0;
+            }
+        }
+        
+        /* Animações */
+        .main-card {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .benefit {
+            animation: fadeInLeft 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        .benefit:nth-child(1) { animation-delay: 0.2s; }
+        .benefit:nth-child(2) { animation-delay: 0.4s; }
+        .benefit:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Efeito de brilho no botão */
+        .whatsapp-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .whatsapp-btn:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">🔥 TREINAMENTO GRATUITO</div>
+        </div>
+        
+        <div class="main-card">
+            <h1 class="headline">3 Segredos Para Ser Aprovada no GHC em 2024</h1>
+            <p class="subheadline">Descubra a metodologia que já aprovou mais de 200 técnicos de enfermagem nos concursos mais disputados do RS</p>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Segredo #1: Como Estudar Apenas 20 Minutos Por Dia</div>
+                        <div class="benefit-description">Método científico que otimiza seu tempo e multiplica seus resultados</div>
+                    </div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Segredo #2: Diferenças Cruciais Entre Fundatec e FAURGS</div>
+                        <div class="benefit-description">O que 98% dos candidatos não sabem sobre essas bancas</div>
+                    </div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="benefit-icon"></div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Segredo #3: Técnica de Memorização Que Funciona</div>
+                        <div class="benefit-description">Como lembrar de tudo na hora da prova sem decorar</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Aprovados</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Melhoraram Notas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">20min</span>
+                    <span class="stat-label">Por Dia</span>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <div class="cta-text">Receba os 3 Segredos GRÁTIS no seu WhatsApp!</div>
+                <a href="https://wa.me/5551999999999?text=QUERO%20OS%203%20SEGREDOS" 
+                   class="whatsapp-btn" 
+                   onclick="fbq('track', 'Lead');">
+                   QUERO RECEBER GRÁTIS
+                </a>
+            </div>
+            
+            <div class="urgency">
+                <div class="urgency-text">⏰ Atenção: Vagas limitadas! Apenas os primeiros 100 inscritos receberão o material completo.</div>
+            </div>
+            
+            <div class="social-proof">
+                <div class="testimonial">
+                    "Seguindo esses 3 segredos, consegui minha aprovação no GHC em apenas 3 meses. O material é incrível e as técnicas realmente funcionam!"
+                </div>
+                <div class="testimonial-author">- Maria S., Aprovada GHC 2024</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Rota da Aprovação. Todos os direitos reservados.</p>
+            <p><a href="mailto:contato@aprovacaoghchcpa.com">contato@aprovacaoghchcpa.com</a></p>
+        </div>
+    </div>
+    
+    <script>
+        // Tracking de cliques no botão WhatsApp
+        document.querySelector('.whatsapp-btn').addEventListener('click', function() {
+            // Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'WhatsApp',
+                    'event_label': 'Captura Lead'
+                });
+            }
+            
+            // Facebook Pixel
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead');
+            }
+        });
+        
+        // Animação de entrada dos elementos
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('.benefit');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateX(0)';
+                }, index * 200);
+            });
+        });
+        
+        // Efeito de hover no botão
+        const btn = document.querySelector('.whatsapp-btn');
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    </script>
+</body>
+</html>
