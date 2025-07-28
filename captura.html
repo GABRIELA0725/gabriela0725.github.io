@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura - Rota da Aprovação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            color: #2c5aa0;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2c5aa0;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3a8a 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .benefits {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .benefit::before {
+            content: "✓";
+            background: #28a745;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .privacy {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">GG</div>
+        
+        <h1>Receba GRÁTIS</h1>
+        <p class="subtitle">Material exclusivo para sua aprovação no GHC e HCPA</p>
+        
+        <form id="captureForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu melhor e-mail">
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(51) 99999-9999">
+            </div>
+            
+            <button type="submit" class="btn">QUERO RECEBER GRÁTIS</button>
+        </form>
+        
+        <div class="benefits">
+            <div class="benefit">Material exclusivo baseado em provas reais</div>
+            <div class="benefit">Dicas de aprovação testadas e aprovadas</div>
+            <div class="benefit">Conteúdo direto no seu WhatsApp</div>
+            <div class="benefit">100% gratuito, sem pegadinhas</div>
+        </div>
+        
+        <p class="privacy">
+            🔒 Seus dados estão seguros. Não enviamos spam.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('captureForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            
+            // Validação básica
+            if (!nome || !email || !whatsapp) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+            
+            // Aqui você pode integrar com seu sistema de captura
+            // Por exemplo: enviar para uma planilha, CRM, etc.
+            
+            // Redirecionamento para WhatsApp
+            const mensagem = `Olá! Me inscrevi para receber o material gratuito da Rota da Aprovação.%0A%0ANome: ${nome}%0AEmail: ${email}%0AWhatsApp: ${whatsapp}`;
+            const linkWhatsApp = `https://wa.me/5551994307667?text=${mensagem}`;
+            
+            // Mostrar mensagem de sucesso
+            alert('Cadastro realizado com sucesso! Você será redirecionado para o WhatsApp.');
+            
+            // Redirecionar para WhatsApp
+            window.open(linkWhatsApp, '_blank');
+        });
+        
+        // Máscara para WhatsApp
+        document.getElementById('whatsapp').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length <= 11) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                if (value.length < 14) {
+                    value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+                }
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
+
